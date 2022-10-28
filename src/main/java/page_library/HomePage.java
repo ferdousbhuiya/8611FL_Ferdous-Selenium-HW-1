@@ -33,12 +33,11 @@ public class HomePage extends Base {
     public void signIn()
     {
         IndexPage indexPage = new IndexPage();
-        SignInPage signInPage = new SignInPage();
-        //HomePage homePage = new HomePage();
+        LoginPage loginPage = new LoginPage();
         String userName= prop.getProperty("app_user");
         String password = prop.getProperty("app_password");
         indexPage.clickSignInButton();
-        signInPage.signIn(userName,password);
+        loginPage.signInTovalidAccount(userName,password);
     }
     public String getCurrURL() throws Throwable {
         HomePage homePage = new HomePage();

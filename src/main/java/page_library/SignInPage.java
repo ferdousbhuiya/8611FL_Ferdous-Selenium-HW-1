@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class SignInPage extends Base {
+    /*
     @FindBy(id = "email")
     public WebElement userNameInput;
     @FindBy(id = "passwd")
@@ -43,4 +44,6 @@ public class SignInPage extends Base {
         clickSubmitButton();
         return new HomePage();
     }
+
+    */
 }

@@ -4,21 +4,21 @@ import base.Base;
 import org.testng.annotations.Test;
 import page_library.HomePage;
 import page_library.IndexPage;
-import page_library.SignInPage;
+import page_library.LoginPage;
 
 import static org.testng.AssertJUnit.assertTrue;
 
 public class SigninTest extends Base {
 
     @Test
-    public void testSignIn(){
+    public void SuccessfulLoginTest(){
         IndexPage indexPage =new IndexPage();
-        SignInPage signInPage = new SignInPage();
+        LoginPage loginPage = new LoginPage();
         HomePage homePage= new HomePage();
         String userName= prop.getProperty("app_user");
         String password = prop.getProperty("app_password");
         indexPage.clickSignInButton();
-        signInPage.signIn(userName,password);
+        loginPage.signInTovalidAccount(userName,password);
         assertTrue(homePage.myAccountHeadingText.isDisplayed());
     }
 }

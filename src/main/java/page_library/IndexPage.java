@@ -5,8 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import javax.swing.*;
-
 public class IndexPage extends Base
 {
 
@@ -20,14 +18,8 @@ public class IndexPage extends Base
     @FindBy(xpath = "//span[@class='lighter']")
     public WebElement searchedItem;
 
-    @FindBy(xpath = "//a[@class='login']")
+    @FindBy(xpath = "//a[contains(text(),'Sign in')]")
     public WebElement signInButton;
-
-    @FindBy(xpath = "//input[@id='email_create']")
-    public WebElement accountCreationEmailBox;
-
-    @FindBy(xpath = "//button[@id='SubmitCreate']")
-            public WebElement createAnAccountBtn;
 
     Base base = new Base();
     public IndexPage() {
@@ -54,9 +46,9 @@ public class IndexPage extends Base
         //Thread.sleep(3000);
         return new SearchResultPage();
     }
-    public SignInPage clickSignInButton() {
+    public LoginPage clickSignInButton() {
         clickElement(signInButton);
-        return new SignInPage();
+        return new LoginPage();
     }
     public void setSearchInput(String item) {
         sendKeysToElements(searchInput, item);
@@ -64,6 +56,8 @@ public class IndexPage extends Base
     public void clickSearchButton() {
         clickElement(searchButton);
     }
+
+
     public ProductPage searchItems(String items) {
         setSearchInput(items);
         clickSearchButton();
@@ -75,12 +69,7 @@ public class IndexPage extends Base
         return homePageURL;
     }
 
-    public AccountCreationPage createAccountPage()
-    {LoginPage loginPage= new LoginPage();
-        base.sendKeysToElements(accountCreationEmailBox, prop.getProperty("nemail"));
-        clickElement(createAnAccountBtn);
-        return new AccountCreationPage();
-    }
+
 
 
 

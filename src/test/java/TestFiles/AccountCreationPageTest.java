@@ -3,41 +3,21 @@ package TestFiles;
 import base.Base;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import page_library.AccountCreationPage;
-import page_library.HomePage;
-import page_library.IndexPage;
-import page_library.LoginPage;
+import page_library.*;
 
-import java.util.HashMap;
+import static org.testng.AssertJUnit.assertTrue;
 
 public class AccountCreationPageTest extends Base {
-
-    private IndexPage indexPage;
-    private LoginPage loginPage;
-    private AccountCreationPage acountCreationPage;
-    private HomePage homePage;
-
-
-
     @Test
-    public void verifyCreateAccountPageTest(String email) throws Throwable {
-       // Log.startTestCase("verifyCreateAccountPageTest");
-        indexPage= new IndexPage();
-        loginPage=indexPage.clickOnSignIn();
-        acountCreationPage=loginPage.createNewAccount(email);
-        boolean result=acountCreationPage.validateAcountCreatePage();
-        Assert.assertTrue(result);
-        //Log.endTestCase("verifyCreateAccountPageTest");
+    public void SuccessfulLoginTest1() throws Throwable {
+        IndexPage indexPage =new IndexPage();
+        LoginPage loginPage = new LoginPage();
+        AccountCreationPage accountCreationPage = new AccountCreationPage();
+        String nemail= prop.getProperty("nemail");
+        indexPage.clickSignInButton();
+        loginPage.setEmailForNewAccount(nemail);
+        loginPage.cliconcreatenewaccount();
+        String flag = accountCreationPage.validateAcountCreatePage();
+        Assert.assertEquals(flag, "Your personal information");
     }
-
-
-    @Test
-    public void verifyCreateAccountPageTest() throws Throwable {
-        acountCreationPage=indexPage.createAccountPage();
-        Assert.assertTrue(acountCreationPage.validateAcountCreatePage());
-
-    }
-
-
-
 }

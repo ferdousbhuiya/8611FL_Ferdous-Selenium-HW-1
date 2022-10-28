@@ -15,6 +15,19 @@ public class ProductPage extends Base {
     @FindBy(id = "add_to_cart")
     public WebElement addCartConfirmation;
 
+
+    @FindBy(id="quantity_wanted")
+    private WebElement quantity;
+
+    @FindBy(name="group_1")
+    private WebElement size;
+
+    @FindBy(xpath="//span[text()='Add to cart']")
+    private WebElement addToCartBtn;
+
+    @FindBy(xpath="//*[@id=\"layer_cart\"]//h2/i")
+    private WebElement addToCartMessag;
+
     public ProductPage() {
         PageFactory.initElements(driver, this);
     }
@@ -35,6 +48,23 @@ public class ProductPage extends Base {
         hover();
         clickAddToCartButton();
         return new AddingToCartPage();
+    }
+
+    public void enterQuantity(String quantity1) throws Throwable {
+        Base base = new Base();
+        base.sendKeysToElements(quantity, quantity1);
+    }
+
+    public void selectSize(String size1) throws Throwable {
+        Base base = new Base();
+        base.moveToElements( size);
+    }
+
+    public boolean validateAddtoCart() throws Throwable {
+        Base base = new Base();
+        base.wait();
+        // action.fluentWait(driver, addToCartMessag, 10);
+        return addToCartMessag.isDisplayed();
     }
 
 }
