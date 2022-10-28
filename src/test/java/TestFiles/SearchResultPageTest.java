@@ -4,22 +4,25 @@ import base.Base;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import page_library.IndexPage;
+import page_library.ProductPage;
 import page_library.SearchResultPage;
 
 public class SearchResultPageTest extends Base {
     private IndexPage index;
-    private SearchResultPage searchResultPage;
+    private ProductPage productPage;
+    public SearchResultPage searchResultPage;
 
 
 
-    @Test(groups = "Smoke")
-    public void productAvailabilityTest(String productName) throws Throwable {
-        //Log.startTestCase("productAvailabilityTest");
-        index= new IndexPage();
-        searchResultPage=index.searchProduct(productName);
-        boolean result=searchResultPage.isProductAvailable();
-        Assert.assertTrue(result);
-        //Log.endTestCase("productAvailabilityTest");
+    @Test(groups = {"Sanity"})
+    public void SearchResultPageTesting() throws Throwable {
+    IndexPage indexPage = new IndexPage();
+    ProductPage productPage = new ProductPage();
+    String item = prop.getProperty("item_to_search");
+    String tit= searchResultPage.ProductAvailable();
+         //productPage.addingItemsToCart();
+
+    Assert.assertEquals(tit, "Dress");
     }
 
 

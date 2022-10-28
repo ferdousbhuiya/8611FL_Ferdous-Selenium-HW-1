@@ -8,15 +8,16 @@ import org.openqa.selenium.support.PageFactory;
 public class SearchResultPage extends Base {
 
 
-    @FindBy(xpath="//*[@id=\"center_column\"]//img")
-    private WebElement productResult;
+    @FindBy(xpath="//span[contains(text(),'\"dress\"')]")
+    public WebElement productResult;
 
     public SearchResultPage() {
         PageFactory.initElements(driver, this);
     }
 
-    public boolean isProductAvailable() throws Throwable {
-        return productResult.isDisplayed();
+    public String ProductAvailable() throws Throwable {
+        String tite= productResult.getText();
+        return tite;
     }
 
     public AddToCartPage clickOnProduct() throws Throwable {

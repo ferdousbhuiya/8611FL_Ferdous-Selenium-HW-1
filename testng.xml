@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="smoke-Test">
+    <test
+          name="smoke">
+        <classes>
+            <class name="TestFiles.AccountCreationPageTest">
+                <methods>
+                    <include name="SuccessfulLoginTest1"/>
+                </methods>
+            </class>
+            <class name="TestFiles.AddingNewAddressTest">
+                <methods>
+                    <include name="addingNewAddressTest"/>
+                </methods>
+            </class>
+            <class name="TestFiles.ClickSignInTest">
+                <methods>
+                    <include name="testSignIn"/>
+                </methods>
+            </class>
+            <class name="TestFiles.HomePageTest">
+                <methods>
+                    <include name="HomePageTest"/>
+                </methods>
+            </class>
+            <class name="TestFiles.IndexPageTest">
+                <methods>
+                    <include name="verifyLogo"/>
+                    <include name="verifyTitle"/>
+                </methods>
+            </class>
+            <class name="TestFiles.LoginPageTest">
+                <methods>
+                    <include name="validateloginPageTest"/>
+                </methods>
+            </class>
+            <class name="TestFiles.OrderPageTest">
+                <methods>
+                    <include name="verifyTotalPrice"/>
+                    <include name="changeQuantityTest"/>
+                </methods>
+            </class>
+            <class name="TestFiles.QuantityChangingTest">
+                <methods>
+                    <include name="changeQuantityTest"/>
+                </methods>
+            </class>
+            <class name="TestFiles.SearchItemsTest">
+                <methods>
+                    <include name="searchItemsTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -12,7 +12,7 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class ChangingColorTest extends Base {
 
-    @Test
+    @Test(groups = {"smoke", "Sanity"})
     public void changeColorTest() {
         IndexPage indexPage = new IndexPage();
         ProductPage productPage = new ProductPage();

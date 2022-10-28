@@ -9,10 +9,10 @@ public class IndexPage extends Base
 {
 
     @FindBy(xpath = "//img[@class='logo img-responsive']")
-    private WebElement myStoreLogo;
+    public WebElement myStoreLogo;
 
     @FindBy(name="submit_search")
-    private WebElement searchButton;
+    public WebElement searchButton;
     @FindBy(id = "search_query_top")
     public WebElement searchInput;
     @FindBy(xpath = "//span[@class='lighter']")
@@ -43,7 +43,7 @@ public class IndexPage extends Base
         base.sendKeysToElements(searchedItem, productName);
         base.moveToElements(searchButton);
         searchButton.click();
-        //Thread.sleep(3000);
+        Thread.sleep(3000);
         return new SearchResultPage();
     }
     public LoginPage clickSignInButton() {
@@ -58,10 +58,10 @@ public class IndexPage extends Base
     }
 
 
-    public ProductPage searchItems(String items) {
+    public void searchItems(String items) {
         setSearchInput(items);
         clickSearchButton();
-        return new ProductPage();
+
     }
 
     public String getCurrURL()  {

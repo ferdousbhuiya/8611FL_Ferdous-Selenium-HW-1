@@ -8,7 +8,7 @@ import static org.testng.AssertJUnit.assertEquals;
 
 public class SearchItemsTest extends Base {
 
-    @Test
+    @Test(groups = "smoke")
     public void searchItemsTest() {
         IndexPage indexPage = new IndexPage();
         String item = prop.getProperty("item_to_search");

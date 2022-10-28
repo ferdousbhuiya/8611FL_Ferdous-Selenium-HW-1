@@ -10,7 +10,7 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class SigninTest extends Base {
 
-    @Test
+    @Test(groups = {"smoke","Sanity"})
     public void SuccessfulLoginTest(){
         IndexPage indexPage =new IndexPage();
         LoginPage loginPage = new LoginPage();

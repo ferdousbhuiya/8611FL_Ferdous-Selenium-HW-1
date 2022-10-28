@@ -8,7 +8,7 @@ import page_library.ProductPage;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class AddToCartTest extends Base {
-    @Test
+    @Test(groups = {"Regression", "Sanity"})
     public void addingItemsToCartTest() throws InterruptedException {
 
         IndexPage indexPage = new IndexPage();

@@ -10,7 +10,7 @@ import static org.testng.AssertJUnit.assertTrue;
 public class AddingNewAddressTest extends Base {
 
 
-    @Test
+    @Test(groups = "Regression")
     public void addingNewAddressTest() {
 
         IndexPage indexPage= new IndexPage();

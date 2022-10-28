@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<listeners>
-		<listener class-name="com.mystore.utility.ListenerClass"></listener>
-	</listeners>
-	<test thread-count="5" name="Regression">
-		<parameter name="browser" value="Chrome"></parameter>
+
+	<test thread-count="5" name="smoke">
 		<groups>
 			<run>
-				<include name="Regression"></include>
+				<include name="Authentication"></include>
 			</run>
 		</groups>
 		<classes>
-			<class name="com.mystore.testcases.HomePageTest" />
-			<class name="com.mystore.testcases.OrderPageTest" />
-			<class name="com.mystore.testcases.SearchResultPageTest" />
-			<class name="com.mystore.testcases.LoginPageTest" />
-			<class name="com.mystore.testcases.AddToCartPageTest" />
-			<class name="com.mystore.testcases.AccountCreationPageTest" />
-			<class name="com.mystore.testcases.IndexPageTest" />
-			<class name="com.mystore.testcases.EndToEndTest" />
+			<class name="TestFiles.AddToCartTest"/>
+			<class name="TestFiles.AccountCreationPageTest" />
+			<class name="TestFiles.AddingNewAddressTest" />
+			<class name="TestFiles.QuantityChangingTest" />
+			<class name="TestFiles.ChangingColorTest" />
+			<class name="TestFiles.ClickSignInTest" />
+			<class name="TestFiles.HomePageTest" />
+			<class name="TestFiles.IndexPageTest" />
+			<class name="TestFiles.LoginPageTest" />
+			<class name="TestFiles.SearchItemsTest" />
+			<class name="TestFiles.SearchResultPageTest" />
+			<class name="TestFiles.SigninTest" />
+			<class name="TestFiles.OrderPageTest" />
+
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

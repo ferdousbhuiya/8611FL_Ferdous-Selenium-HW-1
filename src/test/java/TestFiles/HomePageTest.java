@@ -14,7 +14,7 @@ public class HomePageTest extends Base {
     private HomePage homePage;
     private LoginPage loginPage;
 
-    @Test
+    @Test(groups = "Authentication")
     public void HomePageTest() throws Throwable {
         IndexPage indexPage =new IndexPage();
         LoginPage loginPage = new LoginPage();
