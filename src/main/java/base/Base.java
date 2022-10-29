@@ -55,7 +55,7 @@ public class Base {
             driver = new OperaDriver();
         }
 
-        wait = new WebDriverWait(driver, Long.parseLong(prop.getProperty("driver_timeout")));
+        //wait = new WebDriverWait(driver, Long.parseLong(prop.getProperty("driver_timeout")));
         driver.get(prop.getProperty("url"));
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();

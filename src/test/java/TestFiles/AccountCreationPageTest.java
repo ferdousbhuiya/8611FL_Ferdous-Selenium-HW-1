@@ -8,7 +8,7 @@ import page_library.*;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class AccountCreationPageTest extends Base {
-    @Test(groups = "Sanity")
+    @Test(groups = {"smoke"})
     public void SuccessfulLoginTest1() throws Throwable {
         IndexPage indexPage =new IndexPage();
         LoginPage loginPage = new LoginPage();

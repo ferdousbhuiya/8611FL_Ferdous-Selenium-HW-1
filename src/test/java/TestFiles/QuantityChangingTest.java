@@ -10,7 +10,7 @@ import page_library.ProductPage;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class QuantityChangingTest extends Base {
-    @Test(groups = "smoke")
+    @Test(groups = {"smoke","Regression"})
     public void changeQuantityTest(){
         IndexPage indexPage = new IndexPage();
         ProductPage productPage = new ProductPage();

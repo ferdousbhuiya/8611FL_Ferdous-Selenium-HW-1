@@ -8,7 +8,7 @@ import page_library.IndexPage;
 public class IndexPageTest extends Base {
     private IndexPage indexPage;
 
-    @Test
+    @Test(groups = {"smoke"})
     public void verifyLogo() throws Throwable {
         //Log.startTestCase("verifyLogo");
         indexPage= new IndexPage();
@@ -16,7 +16,7 @@ public class IndexPageTest extends Base {
         Assert.assertTrue(result);
     }
 
-    @Test
+    @Test(groups = {"smoke", "Sanity"})
     public void verifyTitle() {
       indexPage = new IndexPage();
         String actTitle=indexPage.getMyStoreTitle();

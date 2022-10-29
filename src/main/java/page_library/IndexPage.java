@@ -46,9 +46,9 @@ public class IndexPage extends Base
         Thread.sleep(3000);
         return new SearchResultPage();
     }
-    public LoginPage clickSignInButton() {
+    public void clickSignInButton() {
         clickElement(signInButton);
-        return new LoginPage();
+        new LoginPage();
     }
     public void setSearchInput(String item) {
         sendKeysToElements(searchInput, item);
