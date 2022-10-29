@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke_Test" verbose="1">
+    <test  name="Regression">
+        <groups>
+            <run>
+                <include name="Regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="TestFiles.AccountCreationPageTest"/>
+            <class name="TestFiles.AddingNewAddressTest"/>
+            <class name="TestFiles.SearchResultPageTest"/>
+            <class name="TestFiles.AddToCartTest"/>
+            <class name="TestFiles.ChangingColorTest"/>
+            <class name="TestFiles.ClickSignInTest"/>
+            <class name="TestFiles.HomePageTest"/>
+            <class name="TestFiles.IndexPageTest"/>
+            <class name="TestFiles.LoginPageTest"/>
+            <class name="TestFiles.OrderPageTest"/>
+            <class name="TestFiles.QuantityChangingTest"/>
+            <class name="TestFiles.SearchItemsTest"/>
+            <class name="TestFiles.SigninTest">
+            
+            </class>
+        </classes>
+    </test>
+</suite>
