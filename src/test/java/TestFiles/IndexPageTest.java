@@ -8,7 +8,7 @@ import page_library.IndexPage;
 public class IndexPageTest extends Base {
     private IndexPage indexPage;
 
-    @Test(groups = "smoke")
+    @Test
     public void verifyLogo() throws Throwable {
         //Log.startTestCase("verifyLogo");
         indexPage= new IndexPage();
@@ -16,11 +16,11 @@ public class IndexPageTest extends Base {
         Assert.assertTrue(result);
     }
 
-    @Test(groups = "smoke")
+    @Test
     public void verifyTitle() {
       indexPage = new IndexPage();
         String actTitle=indexPage.getMyStoreTitle();
-        Assert.assertEquals(actTitle, "My Store");
+        Assert.assertEquals(actTitle, "Address - My Store");
     }
 
 }

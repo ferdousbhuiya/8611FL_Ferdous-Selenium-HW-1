@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class AccountCreationPage extends Base {
 
-    @FindBy(xpath = "//h3[contains(text(),'Your personal information')]")
+    @FindBy(xpath = "//h1")
     WebElement formTitle;
 
 public AccountCreationPage() {

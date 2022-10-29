@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Smoke_Test" verbose="1">
-    <test  name="Regression">
+        <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="/Users/ferdous/Documents/POM_From_GitHub/8611FL_Ferdous_HW/src/test/java/TestFiles/AddingNewAddressTest.java">
         <groups>
             <run>
                 <include name="Sanity"/>

@@ -18,6 +18,6 @@ public class AccountCreationPageTest extends Base {
         loginPage.setEmailForNewAccount(nemail);
         loginPage.cliconcreatenewaccount();
         String flag = accountCreationPage.validateAcountCreatePage();
-        Assert.assertEquals(flag, "Your personal information");
+        Assert.assertEquals(flag, "AUTHENTICATION");
     }
 }

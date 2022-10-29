@@ -2,6 +2,7 @@ package TestFiles;
 
 import base.Base;
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import page_library.*;
 
@@ -34,7 +35,7 @@ public class OrderPageTest extends Base {
 
     }
 
-    @Test(groups = "Sanity")
+    @Test
     public void changeQuantityTest() {
         HomePage homePage = new HomePage();
         ProductPage productPage = new ProductPage();

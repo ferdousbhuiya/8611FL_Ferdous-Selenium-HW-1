@@ -1,6 +1,7 @@
 package TestFiles;
 
 import base.Base;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import page_library.IndexPage;
 import page_library.ProductPage;

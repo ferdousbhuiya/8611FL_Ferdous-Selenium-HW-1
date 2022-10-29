@@ -2,15 +2,19 @@ package TestFiles;
 
 import base.Base;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import page_library.*;
+import page_library.IndexPage;
+import page_library.LoginPage;
+import page_library.MyAddressesPage;
 
 import static org.testng.AssertJUnit.assertTrue;
 
 public class AddingNewAddressTest extends Base {
 
 
-    @Test(groups = "Regression")
+
+    @Test
     public void addingNewAddressTest() {
 
         IndexPage indexPage= new IndexPage();
